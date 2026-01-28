@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Guarita Inteligente</title>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>Guarita<br><span>Inteligente</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="administracao.html">Administração</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="form-container">
+            <div class="panel-header">Cadastrar Novo Veículo</div>
+            
+            <form id="form-cadastro" class="cadastro-veiculo">
+                <div class="form-group">
+                    <label for="placa">Placa do Veículo</label>
+                    <input type="text" id="placa" placeholder="Ex: ABC1D23" required maxlength="7">
+                </div>
+
+                <div class="form-group">
+                    <label for="veiculo">Marca / Modelo</label>
+                    <input type="text" id="veiculo" placeholder="Ex: Toyota Corolla" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="unidade">Unidade Responsável</label>
+                    <select id="unidade" required>
+                        <option value="" disabled selected>Selecione a unidade...</option>
+                        <option value="direcao">Direção Geral</option>
+                        <option value="1dp">1ª Delegacia de Polícia</option>
+                        <option value="2dp">2ª Delegacia de Polícia</option>
+                        <option value="3dp">3ª Delegacia de Polícia</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-salvar">Salvar Cadastro</button>
+                    <button type="reset" class="btn-cancelar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script-cadastro.js"></script>
+</body>
+</html>

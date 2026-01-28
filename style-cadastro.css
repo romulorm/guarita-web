@@ -1,0 +1,148 @@
+:root {
+    --preto: #000000;
+    --branco: #ffffff;
+    --dourado: #bea55a;
+    --cinza-escuro: #121212;
+    --cinza-input: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    display: flex;
+    height: 100vh;
+}
+
+/* Reuso do Sidebar do dashboard anterior */
+.sidebar {
+    width: 240px;
+    background-color: var(--cinza-escuro);
+    border-right: 1px solid var(--dourado);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.logo { padding: 0 20px 40px; text-align: center; }
+.logo h1 { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; }
+.logo span { color: var(--dourado); }
+.nav-links { list-style: none; }
+.nav-links li a {
+    display: block; padding: 15px 25px; color: var(--branco);
+    text-decoration: none; transition: 0.3s; border-left: 4px solid transparent;
+}
+.nav-links li a.active { color: var(--dourado); border-left: 4px solid var(--dourado); background: rgba(190, 165, 90, 0.05); }
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--cinza-escuro);
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.panel-header {
+    background-color: var(--dourado);
+    color: var(--preto);
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cadastro-veiculo {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dourado);
+    font-size: 0.9rem;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cinza-input);
+    border: 1px solid #333;
+    color: var(--branco);
+    border-radius: 4px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: var(--dourado);
+}
+
+/* Checkbox estilizado */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--dourado);
+    width: 18px;
+    height: 18px;
+}
+
+/* Botões */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-salvar {
+    background-color: var(--dourado);
+    color: var(--preto);
+}
+
+.btn-salvar:hover {
+    background-color: #d4bc72;
+    transform: translateY(-2px);
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #333;
+}
+
+.btn-cancelar:hover {
+    background-color: #222;
+    color: var(--branco);
+}

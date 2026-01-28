@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Guarita Inteligente</title>
+    <link rel="stylesheet" href="style-admin.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>Guarita<br><span>Inteligente</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="administracao.html">Administração</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="admin-header">
+            <h2>Gestão de Sistema</h2>
+            <div class="report-actions">
+                <button class="btn-outline" onclick="gerarRelatorio('pdf')">Exportar PDF</button>
+                <button class="btn-outline" onclick="gerarRelatorio('csv')">Exportar CSV</button>
+            </div>
+        </header>
+
+        <section class="table-container">
+            <div class="search-bar">
+                <input type="text" id="inputBusca" placeholder="Buscar por placa ou unidade...">
+            </div>
+            
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Veículo</th>
+                        <th>Unidade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-veiculos">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="modal-edit" class="modal">
+        <div class="modal-content">
+            <h3>Editar Veículo</h3>
+            <p id="edit-placa-label" style="color: var(--dourado); margin-bottom: 15px;"></p>
+            <input type="text" id="edit-veiculo" placeholder="Modelo/Marca">
+            <div class="modal-actions">
+                <button class="btn-salvar" onclick="salvarEdicao()">Atualizar</button>
+                <button class="btn-cancelar" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-admin.js"></script>
+</body>
+</html>
