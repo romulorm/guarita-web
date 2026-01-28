@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Guarita Inteligente</title>
+    <link rel="stylesheet" href="style-reports.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>Guarita<br><span>Inteligente</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="administracao.html">Administração</a></li>
+            <li><a href="#" class="active">Relatórios</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="report-header">
+            <h2>Emissão de Relatórios</h2>
+            <p>Selecione os filtros abaixo para gerar o documento.</p>
+        </header>
+
+        <section class="filter-card">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="tipo-relatorio">Tipo de Relatório</label>
+                    <select id="tipo-relatorio" onchange="toggleFiltros()">
+                        <option value="placa">Relatório por Placa</option>
+                        <option value="periodo">Relatório por Período</option>
+                    </select>
+                </div>
+
+                <div class="filter-group" id="group-placa">
+                    <label for="filtro-placa">Digite a Placa</label>
+                    <input type="text" id="filtro-placa" placeholder="Ex: ABC1234">
+                </div>
+
+                <div class="filter-group hidden" id="group-periodo">
+                    <label>Período (Início - Fim)</label>
+                    <div class="date-inputs">
+                        <input type="date" id="data-inicio">
+                        <input type="date" id="data-fim">
+                    </div>
+                </div>
+
+                <div class="filter-group action-align">
+                    <button class="btn-gerar" onclick="processarRelatorio()">Gerar Relatório</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section" id="preview-area">
+            <div class="empty-state">
+                <p>Nenhum relatório gerado no momento.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script-reports.js"></script>
+</body>
+</html>
