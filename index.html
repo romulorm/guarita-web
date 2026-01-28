@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarita Inteligente - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>Guarita<br><span>Inteligente</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="#">Administração</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="video-container">
+            <div class="panel-header">CÂMERA 01 - ACESSO PRINCIPAL</div>
+            <div class="video-feed">
+                <div class="scanner-line"></div>
+                <div class="overlay-text">MONITORAMENTO LPR ATIVO</div>
+            </div>
+        </section>
+
+        <section class="log-container">
+            <div class="panel-header">ÚLTIMOS REGISTROS</div>
+            <div class="log-list" id="log-list">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
